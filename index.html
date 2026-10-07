@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cozy Yard — игровой дашборд, который помогает выбрать игру на вечер." />
+  <title>Cozy Yard — что играем сегодня?</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+</head>
+<body>
+  <div class="room-bg" aria-hidden="true"></div>
+  <div class="room-shade" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Cozy Yard, главная">
+      <span class="brand-mark">⌂</span>
+      <span><strong>Cozy Yard</strong><small>игры · уют · твой вечер</small></span>
+    </a>
+
+    <nav class="topnav" aria-label="Основная навигация">
+      <button class="nav-link is-active" data-scroll="dashboard">Главная</button>
+      <button class="nav-link" data-scroll="library">Моя библиотека</button>
+      <button class="nav-link" data-scroll="discover">Бесплатно сейчас</button>
+      <button class="nav-link" data-scroll="plans">Планы</button>
+    </nav>
+
+    <button id="addWidgetBtn" class="ghost-btn">＋ Добавить блок</button>
+  </header>
+
+  <main id="dashboard" class="dashboard" aria-live="polite"></main>
+
+  <dialog id="widgetDialog" class="widget-dialog">
+    <form method="dialog" class="dialog-card">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">Настрой пространство</p>
+          <h2>Добавить блок</h2>
+        </div>
+        <button class="icon-btn" value="cancel" aria-label="Закрыть">×</button>
+      </div>
+      <div id="widgetChoices" class="widget-choices"></div>
+    </form>
+  </dialog>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
